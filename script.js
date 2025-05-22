@@ -1,24 +1,21 @@
-function run() {
+let words = ["Apple", "Happy"]
 
-    var artist = "drake";
 
-    $.ajax({
-        url: 'https://itunes.apple.com/search?media=music&term=' + artist,
-        dataType: "json",
-        success: process
-    });
+// Marcelo random word generator
+
+function wordGen(){
+    let fill = Math.floor(Math.random() * words.length);
+    let word = words[fill];
+    console.log(word);
+    console.log(word.length)
 }
-//change
-function process(data) {
-    
-    console.log(data)
+//document.getElementById("submit").addEventListener("click",wordGen);
+ 
+wordGen();
 
-    let tableHTML = "";
-
-    /*  loop over data and build table rows so that they come
-        out like tableHTML += "<tr><td>" + data[i].songName + "</td></tr>"    */
-    
-    //add completed table into HTML table tag
-    document.getElementById("output").innerHTML = tableHTML;
-    
+function checkWord(){
+    for(let i = 0; i < word.length)
 }
+
+
+document.getElementById("submit").addEventListener("click",checkWord);
